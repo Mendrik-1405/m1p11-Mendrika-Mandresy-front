@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { RouterModule } from '@angular/router';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,RouterModule,NzLayoutModule],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'm1p11-Mendrika-Mandresy-front';
 }
