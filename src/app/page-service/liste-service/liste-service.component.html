@@ -1,0 +1,31 @@
+<p-table [value]="services" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            Services
+            <p-button icon="pi pi-refresh"></p-button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nom</th>
+            <th>Image</th>
+            <th>Prix</th>
+            <th>Durée</th>
+            <th>Commission</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-service>
+        <tr>
+            <td>{{service.nom}}</td>
+            <td><img [src]="'./asset/' + service.photo" [alt]="service.photo" width="100" class="shadow-4" /></td>
+            <td>{{service.prix | currency:'USD'}}</td>
+            <td>{{service.duree}}</td>
+            <td>{{service.commission}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="flex align-items-center justify-content-between">
+            In total there are {{services ? services.length : 0 }} products.
+        </div>
+    </ng-template>
+</p-table>
