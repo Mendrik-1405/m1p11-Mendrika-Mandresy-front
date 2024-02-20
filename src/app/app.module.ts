@@ -8,6 +8,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { AppLayoutModule } from './layout/app.layout.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
     TableModule,
     ButtonModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    AppLayoutModule
   ],
   providers: [
     provideHttpClient(withFetch())
