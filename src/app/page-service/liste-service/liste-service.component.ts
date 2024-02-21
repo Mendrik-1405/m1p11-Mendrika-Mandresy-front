@@ -1,9 +1,9 @@
-import { TableModule } from 'primeng/table';
 import { Component, OnInit } from '@angular/core';
 import { Service } from '../../models/service';
 import { ServiceService } from '../../services/service.service';
-import { CommonModule } from '@angular/common';
+import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'service-liste',

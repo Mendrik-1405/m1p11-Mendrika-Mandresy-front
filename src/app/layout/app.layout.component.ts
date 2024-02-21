@@ -86,12 +86,13 @@ export class AppLayoutComponent implements OnDestroy {
     }
 
     unblockBodyScroll(): void {
-        if (document.body.classList) {
-            document.body.classList.remove('blocked-scroll');
-        }
-        else {
-            document.body.className = document.body.className.replace(new RegExp('(^|\\b)' +
-                'blocked-scroll'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        if (typeof document !== 'undefined' && document.body) {
+            if (document.body.classList) {
+                document.body.classList.remove('blocked-scroll');
+            } else {
+                document.body.className = document.body.className.replace(new RegExp('(^|\\b)' +
+                    'blocked-scroll'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
         }
     }
 
