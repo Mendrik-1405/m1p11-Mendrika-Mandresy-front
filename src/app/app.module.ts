@@ -5,6 +5,7 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { AppLayoutModule } from './layout/app.layout.module';
 import { ListeServiceModule } from './page-service/liste-service/liste-service.module';
 import { InscriptionModule } from './page-inscription/inscription.module';
+import { DepenseModule } from './page-depense/depense.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InscriptionModule } from './page-inscription/inscription.module';
     HttpClientModule,
     AppLayoutModule,
     ListeServiceModule,
-    InscriptionModule
+    InscriptionModule,
+    DepenseModule
   ],
   providers: [
     provideHttpClient(withFetch())
