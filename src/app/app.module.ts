@@ -3,9 +3,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppLayoutModule } from './layout/app.layout.module';
+//
 import { ListeServiceModule } from './page-service/liste-service/liste-service.module';
 import { InscriptionModule } from './page-inscription/inscription.module';
 import { DepenseModule } from './page-depense/depense.module';
+//
+import { LoginModule } from './employe/login/login.module';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,14 @@ import { DepenseModule } from './page-depense/depense.module';
     AppRoutingModule,
     HttpClientModule,
     AppLayoutModule,
+
+    //mandresy
     ListeServiceModule,
     InscriptionModule,
-    DepenseModule
+    DepenseModule,
+
+    //sasuke
+    LoginModule,
   ],
   providers: [
     provideHttpClient(withFetch())
