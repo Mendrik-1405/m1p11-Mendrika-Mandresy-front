@@ -1,0 +1,37 @@
+<div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
+    <div class="flex flex-column align-items-center justify-content-center">          
+        <div style="border-radius:56px; padding:0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%);">
+            <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius:53px">
+                <div class="text-center mb-5">
+                    <div class="text-900 text-3xl font-medium mb-3">Bienvenue</div>
+                    <span class="text-600 font-medium">Inscrivez-vous pour créer un compte</span>
+                </div>
+
+                <div>
+                    <form>
+                        <label for="nom" class="block text-900 text-xl font-medium mb-2">Votre nom</label>
+                        <input id="nom" type="text" name="nom" placeholder="Veuillez saisir votre nom" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+
+                        <label for="email" class="block text-900 text-xl font-medium mb-2">Email</label>
+                        <input id="email" type="text" name="email" placeholder="Veuillez saisir votre adresse email" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+
+                        <label for="phone" class="block text-900 text-xl font-medium mb-2">Téléphone</label>
+                        <input id="phone" type="text" name="telephone" placeholder="Votre numero téléphone" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+
+                        <label for="password" class="block text-900 text-xl font-medium mb-2">Mot de passe</label>
+                        <input id="password" type="password" name="password" placeholder="Veuillez définir votre mot de passe" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+
+                        <label for="confirm" class="block text-900 text-xl font-medium mb-2">Confirmation de mot de passe</label>
+                        <input id="confirm" type="password" name="confirm" placeholder="Confirmer votre mot de passe" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+
+                        <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                            <!-- <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Mot de passe oublie</a> -->
+                        </div>
+                        <button pButton pRipple label="Créer votre compte" type="submit" class="w-full p-3 text-xl"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
