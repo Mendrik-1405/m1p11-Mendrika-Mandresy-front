@@ -20,14 +20,4 @@ export class ListeServiceComponent implements OnInit {
         });
     }
 
-    // getSeverity(status: string) {
-    //     switch (status) {
-    //         case 'INSTOCK':
-    //             return 'success';
-    //         case 'LOWSTOCK':
-    //             return 'warning';
-    //         case 'OUTOFSTOCK':
-    //             return 'danger';
-    //     }
-    // }
 }
