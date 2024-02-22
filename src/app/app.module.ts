@@ -7,6 +7,11 @@ import { AppLayoutModule } from './layout/app.layout.module';
 import { ListeServiceModule } from './page-service/liste-service/liste-service.module';
 import { InscriptionModule } from './page-inscription/inscription.module';
 import { DepenseModule } from './page-depense/depense.module';
+import { InputTextModule } from 'primeng/inputtext';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 //
 import { LoginModule } from './employe/login/login.module';
 
@@ -23,6 +28,11 @@ import { LoginModule } from './employe/login/login.module';
     ListeServiceModule,
     InscriptionModule,
     DepenseModule,
+    InputTextModule,
+    CalendarModule,
+    DropdownModule,
+    BrowserModule,
+    FormsModule,
 
     //sasuke
     LoginModule,

@@ -4,18 +4,40 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { Depense } from '../models/depense';
 import { DepenseService } from '../services/depense.service';
+import { InputTextModule } from 'primeng/inputtext';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+interface Type {
+    name: string;
+}
 
 @Component({
     selector: 'depense',
-    templateUrl: 'depense.component.html',
-    styleUrl: 'depense.component.css'
+    templateUrl: 'depense.component.html'
 })
+
 export class DepenseComponent implements OnInit {
+
     depenses!: Depense[];
+    types!: Type[] | undefined;
+    type!: Type | undefined;
+    date!: Date | undefined;
+    montant!: number | 0;
 
     constructor(private depenseService: DepenseService) {}
 
     ngOnInit() {
+        this.types = [
+            { name: 'Loyer'},
+            { name: 'Jirama'},
+            { name: 'Salaire'},
+            { name: 'Autre'}
+        ];
+
         this.depenseService.getAllDepense().subscribe((data) => {
             this.depenses = data;
         });
