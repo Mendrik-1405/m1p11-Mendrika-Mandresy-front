@@ -1,3 +1,24 @@
+<div>
+    <form>
+        <label for="type" class="block text-900 text-xl font-medium mb-2">Type</label>
+        <select name="type" required>
+            <option disabled>Choisir</option>
+            <option value="Loyer">Loyer</option>
+            <option value="Jirama">Jirama</option>
+            <option value="Salaire">Salaire</option>
+            <option value="Autre">Autre</option>
+        </select>
+
+        <label for="montant" class="block text-900 text-xl font-medium mb-2">Montant</label>
+        <input id="montant" type="text" name="montant" placeholder="Saisir le montant" pInputText class="w-full md:w-15rem mb-3" style="padding:1rem" required>
+    
+        <label for="date" class="block text-900 text-xl font-medium mb-2">Date</label>
+        <input id="date" type="date" name="date" pInputText class="w-full md:w-15rem mb-3" style="padding:1rem" required>
+    
+        <p><button pButton pRipple label="Ajouter" type="submit" id="add"></button></p>
+    </form>
+</div>
+<br>
 <p-table [value]="depenses" [tableStyle]="{'min-width': '60rem'}">
     <ng-template pTemplate="caption">
         <div class="flex align-items-center justify-content-between">

@@ -1,0 +1,21 @@
+#add {
+    background-color: green;
+    border-color: green;
+    width: 210px;
+}
+
+#add:hover {
+    background-color: darkolivegreen;
+    font-weight: bold;
+}
+
+input {
+    height: 20px;
+}
+
+select {
+    height: 35px;
+    width: 210px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}

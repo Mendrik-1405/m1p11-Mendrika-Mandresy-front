@@ -7,7 +7,8 @@ import { DepenseService } from '../services/depense.service';
 
 @Component({
     selector: 'depense',
-    templateUrl: 'depense.component.html'
+    templateUrl: 'depense.component.html',
+    styleUrl: 'depense.component.css'
 })
 export class DepenseComponent implements OnInit {
     depenses!: Depense[];
