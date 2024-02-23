@@ -7,6 +7,7 @@ import { InscriptionComponent } from './page-inscription/inscription.component';
 import { DepenseComponent } from './page-depense/depense.component';
 //
 import { LoginComponent } from './employe/login/login.component';
+import { RdvComponent } from './employe/rdv/rdv.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -21,8 +22,12 @@ const routes: Routes = [
 
 
   //sasuke
-  { path: 'employelogin', component: LoginComponent }
-
+  { path: 'employelogin', component: LoginComponent },
+  
+  {path: 'employe', component: AppLayoutComponent,
+  children: [
+    { path: 'rdv', component: RdvComponent }
+  ]},
 ];
 
 @NgModule({

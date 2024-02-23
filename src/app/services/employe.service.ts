@@ -17,7 +17,6 @@ export class EmployeService {
  
   constructor(private http: HttpClient, public router: Router, private cookieService: CookieService) { }
   login(employe: Employe):Observable<Employe> {
-    console.log(employe);
     return this.http.post<Employe>(`${environment.baseApiURL}/employe/login`, employe,httpOptions);
   }
   getToken() {

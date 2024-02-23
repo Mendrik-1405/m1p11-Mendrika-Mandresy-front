@@ -14,6 +14,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 //
 import { LoginModule } from './employe/login/login.module';
+import { RdvModule } from './employe/rdv/rdv.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LoginModule } from './employe/login/login.module';
 
     //sasuke
     LoginModule,
+    RdvModule
   ],
   providers: [
     provideHttpClient(withFetch())
