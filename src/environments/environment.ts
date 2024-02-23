@@ -1,3 +1,3 @@
 export const environment = {
-    baseApiURL: 'http://localhost:3000/api'
+    baseApiURL: 'https://m1p11-mendrika-mandresy.vercel.app/api'
 };
