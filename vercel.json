@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "public": true,
+    "name": "m1p11-mendrika-mandresy-front",
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/api"
+      }
+    ],
+    "functions": {
+      "api/index.js": {
+        "includeFiles": "dist/m1p11-mendrika-mandresy-front/**"
+      }
+    }
+  }
