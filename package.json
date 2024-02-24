@@ -7,10 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:m1p11-Mendrika-Mandresy-front": "node dist/m1p11-mendrika-mandresy-front/server/server.mjs",
-    "build:ssr": "ng build && ng run m1p11-mendrika-mandresy-front:server",
-    "serve:ssr": "node dist/m1p11-mendrika-mandresy-front/server/main.js",
-    "vercel-build": "npm run build:ssr"
+    "serve:ssr:m1p11-Mendrika-Mandresy-front": "node dist/m1p11-mendrika-mandresy-front/server/server.mjs"
   },
   "private": true,
   "dependencies": {
