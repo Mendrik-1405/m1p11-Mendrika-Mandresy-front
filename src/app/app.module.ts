@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginModule } from './employe/login/login.module';
 import { RdvModule } from './employe/rdv/rdv.module';
 import { ListeHistoriqueRdvModule } from './historique-rdv/liste-rdv/RendezVous.module';
+import { NewemployeModule } from './employe/newemploye/newemploye.module';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { ListeHistoriqueRdvModule } from './historique-rdv/liste-rdv/RendezVous.
 
     //sasuke
     LoginModule,
-    RdvModule
+    RdvModule,
+    NewemployeModule
   ],
   providers: [
     provideHttpClient(withFetch())
