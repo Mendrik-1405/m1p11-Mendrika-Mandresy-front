@@ -24,14 +24,14 @@ export class DepenseComponent implements OnInit {
 
     depenses!: Depense[];
     types!: Type[] | undefined;
-    type!: Type | undefined;
-    date!: Date | undefined;
-    montant!: number | 0;
+    //type!: Type | undefined;
+    //date!: Date | undefined;
+    //montant!: number | 0;
 
     depense = {
-        type : this.type,
-        date : this.date,
-        montant : this.montant
+        type : '',
+        date : '',
+        montant : 0 
     };
 
     constructor(private depenseService: DepenseService) {}
