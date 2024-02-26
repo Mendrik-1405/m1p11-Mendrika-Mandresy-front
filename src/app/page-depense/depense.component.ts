@@ -28,6 +28,12 @@ export class DepenseComponent implements OnInit {
     date!: Date | undefined;
     montant!: number | 0;
 
+    depense = {
+        type : this.type,
+        date : this.date,
+        montant : this.montant
+    };
+
     constructor(private depenseService: DepenseService) {}
 
     ngOnInit() {
@@ -40,6 +46,14 @@ export class DepenseComponent implements OnInit {
 
         this.depenseService.getAllDepense().subscribe((data) => {
             this.depenses = data;
+        });
+    }
+
+    AjoutDepense() {
+        this.depenseService.ajoutDepense(this.depense).subscribe((data) => {
+            console.log('Dépense ajoutée avec succès:', data);
+        }, (error) => {
+            console.error('Erreur lors de l\'ajout de la dépense:', error);
         });
     }
 

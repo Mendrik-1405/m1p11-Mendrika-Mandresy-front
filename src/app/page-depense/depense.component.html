@@ -33,24 +33,24 @@
     <div class="card">
         <h5>Nouvelle dépense</h5>
         <div class="p-fluid p-formgrid grid">
-            <form>
+            <form (ngSubmit) = "AjoutDepense()">
                 <div class="field col-12">
                     <span class="p-float-label">
-                        <p-dropdown [options]="types" [(ngModel)]="type"  placeholder="Type" optionLabel="name" inputId="float-label"></p-dropdown>
+                        <p-dropdown [options]="types" [(ngModel)]="depense.type"  placeholder="Type" optionLabel="name" inputId="float-label"></p-dropdown>
                         <label for="float-label">Type</label>
                     </span>
                 </div>
                 <div class="field col-12">
                     <span class="p-float-label">
-                        <input pInputText id="montant" [(ngModel)]="montant" required>
+                        <input pInputText id="montant" [(ngModel)]="depense.montant" required>
                         <label for="montant">Montant</label>
                     </span>
                 </div>
                 <div class="field col-12">
-                    <p-calendar [(ngModel)]="date" [iconDisplay]="'input'" [showIcon]="true"></p-calendar>
+                    <p-calendar [(ngModel)]="depense.date" [iconDisplay]="'input'" [showIcon]="true"></p-calendar>
                 </div>
                 <div class="field col-12">
-                    <button pButton pRipple label="Insérer" class="p-button-success"></button>
+                    <button pButton pRipple label="Insérer" class="p-button-success" type="submit"></button>
                 </div>
             </form>
         </div>
