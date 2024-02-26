@@ -22,4 +22,7 @@ export class EmployeService {
   getToken() {
     return this.cookieService.get('token');
   }
+  uploadEmployeData(formData: FormData) {
+    return this.http.post(`${environment.baseApiURL}/employe/upload`, formData);
+  }
 }

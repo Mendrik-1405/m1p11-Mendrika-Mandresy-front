@@ -8,6 +8,7 @@ import { DepenseComponent } from './page-depense/depense.component';
 //
 import { LoginComponent } from './employe/login/login.component';
 import { RdvComponent } from './employe/rdv/rdv.component';
+import { NewemployeComponent } from './employe/newemploye/newemploye.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   
   {path: 'employe', component: AppLayoutComponent,
   children: [
-    { path: 'rdv', component: RdvComponent }
+    { path: 'rdv', component: RdvComponent },
+    { path: 'new', component: NewemployeComponent }
   ]},
 ];
 
