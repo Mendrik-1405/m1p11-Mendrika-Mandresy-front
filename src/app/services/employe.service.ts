@@ -25,4 +25,7 @@ export class EmployeService {
   uploadEmployeData(formData: FormData) {
     return this.http.post(`${environment.baseApiURL}/employe/upload`, formData);
   }
+  getAllEmploye(): Observable<Employe[]> {
+    return this.http.get<Employe[]>(`${environment.baseApiURL}/employe`);
+  }
 }

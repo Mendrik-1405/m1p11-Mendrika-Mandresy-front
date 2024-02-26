@@ -11,6 +11,7 @@ import { LoginComponent } from './employe/login/login.component';
 import { RdvComponent } from './employe/rdv/rdv.component';
 import { NewemployeComponent } from './employe/newemploye/newemploye.component';
 import { PorteFeuilleComponent } from './porte-feuille/porte-feuille.component';
+import { ListemployeComponent } from './employe/listemploye/listemploye.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path: 'employe', component: AppLayoutComponent,
   children: [
     { path: 'rdv', component: RdvComponent },
-    { path: 'new', component: NewemployeComponent }
+    { path: 'new', component: NewemployeComponent },
+    { path: 'list', component: ListemployeComponent },
   ]},
 ];
 

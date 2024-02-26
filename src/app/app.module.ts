@@ -18,6 +18,7 @@ import { LoginModule } from './employe/login/login.module';
 import { RdvModule } from './employe/rdv/rdv.module';
 import { ListeHistoriqueRdvModule } from './historique-rdv/liste-rdv/RendezVous.module';
 import { NewemployeModule } from './employe/newemploye/newemploye.module';
+import { ListemployeModule } from './employe/listemploye/listemploye.module';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { NewemployeModule } from './employe/newemploye/newemploye.module';
     //sasuke
     LoginModule,
     RdvModule,
-    NewemployeModule
+    NewemployeModule,
+    ListemployeModule
   ],
   providers: [
     provideHttpClient(withFetch())
