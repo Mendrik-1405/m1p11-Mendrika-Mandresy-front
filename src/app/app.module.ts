@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 //
 import { LoginModule } from './employe/login/login.module';
 import { RdvModule } from './employe/rdv/rdv.module';
+import { ListeHistoriqueRdvModule } from './historique-rdv/liste-rdv/RendezVous.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RdvModule } from './employe/rdv/rdv.module';
     DropdownModule,
     BrowserModule,
     FormsModule,
+    ListeHistoriqueRdvModule,
 
     //sasuke
     LoginModule,
