@@ -17,9 +17,10 @@
     </ng-template>
     <ng-template pTemplate="body" let-rdv>
         <tr>
-            <td>{{rdv.date | date: 'yy-MM-dd'}}</td>
-            <td>{{rdv.heure | date: 'hh:mm'}}</td>
+            <td>{{rdv.dateheure | date: 'yy-MM-dd'}}</td>
+            <td>{{rdv.dateheure | date: 'hh:mm'}}</td>
             <td>{{rdv.service}}</td>
+            <td><img [src]="'./assets/' + rdv.photoService" [alt]="rdv.photoService" width="50" height="50" class="shadow-4" /></td>
             <td>{{rdv.employe}}</td>
             <td><img [src]="'./assets/' + rdv.photoEmploye" [alt]="rdv.photoEmploye" width="50" height="50" class="shadow-4" /></td>
             <td>

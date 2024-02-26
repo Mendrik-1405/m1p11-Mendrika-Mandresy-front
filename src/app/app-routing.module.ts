@@ -5,6 +5,7 @@ import { AppLayoutComponent } from './layout/app.layout.component';
 import { ListeServiceComponent } from './page-service/liste-service/liste-service.component';
 import { InscriptionComponent } from './page-inscription/inscription.component';
 import { DepenseComponent } from './page-depense/depense.component';
+import { RendezVousComponent } from './historique-rdv/liste-rdv/RendezVous.component';
 //
 import { LoginComponent } from './employe/login/login.component';
 import { RdvComponent } from './employe/rdv/rdv.component';
@@ -14,6 +15,11 @@ const routes: Routes = [
   {path: '', component: AppLayoutComponent},
 
   {path: 'user/c/inscription', component: InscriptionComponent},
+
+  {path: 'user/c', component: AppLayoutComponent,
+  children: [
+    {path: 'my-rdv', component: RendezVousComponent}
+  ]},
 
   {path: 'user/m', component: AppLayoutComponent,
   children: [

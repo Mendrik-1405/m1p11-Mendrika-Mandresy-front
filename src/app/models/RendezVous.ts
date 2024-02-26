@@ -1,7 +1,6 @@
 export interface RendezVous {
     _id?: string;
-    date: string;
-    heure: string;
+    dateheure: string;
     service: string;
     photoService: string;
     employe: string;
