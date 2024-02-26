@@ -12,6 +12,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { PorteFeuilleModule } from './porte-feuille/porte-feuille.module';
 //
 import { LoginModule } from './employe/login/login.module';
 import { RdvModule } from './employe/rdv/rdv.module';
@@ -38,6 +39,7 @@ import { NewemployeModule } from './employe/newemploye/newemploye.module';
     BrowserModule,
     FormsModule,
     ListeHistoriqueRdvModule,
+    PorteFeuilleModule,
 
     //sasuke
     LoginModule,

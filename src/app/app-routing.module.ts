@@ -10,6 +10,7 @@ import { RendezVousComponent } from './historique-rdv/liste-rdv/RendezVous.compo
 import { LoginComponent } from './employe/login/login.component';
 import { RdvComponent } from './employe/rdv/rdv.component';
 import { NewemployeComponent } from './employe/newemploye/newemploye.component';
+import { PorteFeuilleComponent } from './porte-feuille/porte-feuille.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
 
   {path: 'user/c', component: AppLayoutComponent,
   children: [
-    {path: 'my-rdv', component: RendezVousComponent}
+    {path: 'my-rdv', component: RendezVousComponent},
+    {path: 'my-account', component: PorteFeuilleComponent}
   ]},
 
   {path: 'user/m', component: AppLayoutComponent,
