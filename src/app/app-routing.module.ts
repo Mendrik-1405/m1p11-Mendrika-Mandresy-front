@@ -12,6 +12,8 @@ import { RdvComponent } from './employe/rdv/rdv.component';
 import { NewemployeComponent } from './employe/newemploye/newemploye.component';
 import { PorteFeuilleComponent } from './porte-feuille/porte-feuille.component';
 import { ListemployeComponent } from './employe/listemploye/listemploye.component';
+import { ModifemployeComponent } from './employe/modifemploye/modifemploye.component';
+import { HoraireComponent } from './employe/horaire/horaire.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -39,6 +41,8 @@ const routes: Routes = [
     { path: 'rdv', component: RdvComponent },
     { path: 'new', component: NewemployeComponent },
     { path: 'list', component: ListemployeComponent },
+    { path: 'update/:id', component: ModifemployeComponent },
+    { path: 'horaire', component:HoraireComponent},
   ]},
 ];
 

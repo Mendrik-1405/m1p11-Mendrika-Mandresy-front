@@ -19,6 +19,9 @@ import { RdvModule } from './employe/rdv/rdv.module';
 import { ListeHistoriqueRdvModule } from './historique-rdv/liste-rdv/RendezVous.module';
 import { NewemployeModule } from './employe/newemploye/newemploye.module';
 import { ListemployeModule } from './employe/listemploye/listemploye.module';
+import { ModifemployeModule } from './employe/modifemploye/modifemploye.module';
+import { HoraireComponent } from './employe/horaire/horaire.component';
+import { HoraireModule } from './employe/horaire/horaire.module';
 
 
 @NgModule({
@@ -46,7 +49,9 @@ import { ListemployeModule } from './employe/listemploye/listemploye.module';
     LoginModule,
     RdvModule,
     NewemployeModule,
-    ListemployeModule
+    ListemployeModule,
+    ModifemployeModule,
+    HoraireModule
   ],
   providers: [
     provideHttpClient(withFetch())
