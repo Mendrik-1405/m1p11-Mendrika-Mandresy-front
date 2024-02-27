@@ -23,9 +23,12 @@ export class EmployeService {
     return this.cookieService.get('token');
   }
   uploadEmployeData(formData: FormData) {
-    return this.http.post(`${environment.baseApiURL}/employe/upload`, formData);
+    return this.http.post(`${environment.baseApiURL}/employe/create`, formData);
   }
   getAllEmploye(): Observable<Employe[]> {
     return this.http.get<Employe[]>(`${environment.baseApiURL}/employe`);
+  }
+  getEmployebyId(id: string):Observable<Employe> {
+    return this.http.get<Employe>(`${environment.baseApiURL}/employe/${id}`);
   }
 }
