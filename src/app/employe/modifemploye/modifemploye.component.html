@@ -1,0 +1,43 @@
+<div class="grid">
+	<div class="col-12 md:col-6">
+		<div class="card p-fluid">
+			<h5>modifier employe</h5>
+            <form (ngSubmit)="submitEmpl()">
+                <div class="field">
+                    <label htmlFor="name1">Nom</label>
+                    <input pInputText id="name1" [(ngModel)]="employe.name" name="name" type="text" required/>
+                </div>
+                <div class="field">
+                    <label htmlFor="email1">Mot de passe</label>
+                    <input pInputText id="email1" [(ngModel)]="employe.password" name="password" type="text" required/>
+                </div>
+                <div class="field">
+                    <label htmlFor="sexe">Sexe</label>
+                    <input pInputText id="sexe" [(ngModel)]="employe.sexe" name="sexe" type="text" required/>
+                </div>
+                <div class="field">
+                    <label htmlFor="tel1">Phone</label>
+                    <input pInputText id="tel1" [(ngModel)]="employe.phone" name="phone" type="text" required/>
+                </div>
+                <div class="field">
+                    <label>photo</label>
+                    <div *ngIf="!files.length" class="col-12 rmpm dropzone" appDrag (files)="filesDropped($event)">
+                        <div class="text-wrapper">
+                            <div class="centered">Drop your file here!</div>
+                        </div>
+                    </div>
+                    <!--droped image preview-->
+                    <div *ngFor="let file of files">
+                    <img *ngIf="file" [src]="file.url" width="100px" height="100px">
+                    </div>
+                </div>
+                <!-- <div class="field">
+                    <label htmlFor="age1">photo</label>
+                    <input pInputText id="age1" type="text" />
+                </div> -->
+                <button pButton pRipple label="enregistrer" class="w-full p-3 text-xl"></button>
+            </form>
+		</div>
+	</div>
+
+</div>
