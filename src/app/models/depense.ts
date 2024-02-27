@@ -1,5 +1,5 @@
 export interface Depense {
     type: string;
-    montant: number;
+    prix: number;
     date: Date;
 }

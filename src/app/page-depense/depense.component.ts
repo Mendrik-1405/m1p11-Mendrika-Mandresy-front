@@ -24,14 +24,11 @@ export class DepenseComponent implements OnInit {
 
     depenses!: Depense[];
     types!: Type[] | undefined;
-    //type!: Type | undefined;
-    //date!: Date | undefined;
-    //montant!: number | 0;
 
     depense = {
-        type : '',
-        date : '',
-        montant : 0 
+        type : undefined,
+        montant : undefined,
+        date : undefined
     };
 
     constructor(private depenseService: DepenseService) {}
@@ -50,11 +47,7 @@ export class DepenseComponent implements OnInit {
     }
 
     AjoutDepense() {
-        this.depenseService.ajoutDepense(this.depense).subscribe((data) => {
-            console.log('Dépense ajoutée avec succès:', data);
-        }, (error) => {
-            console.error('Erreur lors de l\'ajout de la dépense:', error);
-        });
+        this.depenseService.ajoutDepense(this.depense);
     }
 
 }
