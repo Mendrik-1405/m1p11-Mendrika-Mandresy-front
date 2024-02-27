@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag'
+import { ToastModule } from 'primeng/toast';
+import { SkeletonModule } from 'primeng/skeleton';
+//
 import { RdvComponent } from './rdv.component';
 import { RdvService } from '../../services/rdv.service';
-
+import { MessageService,ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [RdvComponent],
@@ -14,8 +17,10 @@ import { RdvService } from '../../services/rdv.service';
     CommonModule,
     ButtonModule,
     TagModule,
-    
+    ToastModule,
+    SkeletonModule
+    //
   ],
-  providers:[RdvService]
+  providers:[MessageService, ConfirmationService,RdvService]
 })
 export class RdvModule { }

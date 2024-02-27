@@ -1,0 +1,22 @@
+<div class="card">
+<p-table [value]="employes"  [customSort]="true" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="name" style="width:20%">Name <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="sexe" style="width:20%">sexe <p-sortIcon field="sexe"></p-sortIcon></th>
+            <th pSortableColumn="phone" style="width:20%">phone <p-sortIcon field="phone"></p-sortIcon></th>
+            <th pSortableColumn="photo" style="width:20%">photo <p-sortIcon field="photo"></p-sortIcon></th>
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employe>
+        <tr>
+            <td>{{employe.name}}</td>
+            <td>{{employe.sexe}}</td>
+            <td>{{employe.phone}}</td>
+            <td><img [src]="'data:image;base64,'+employe.photo" class="card-img-top custom-card-img"
+                                alt="Service Image"></td>
+        </tr>
+    </ng-template>
+</p-table>
+</div>

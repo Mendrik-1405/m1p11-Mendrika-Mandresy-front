@@ -5,14 +5,26 @@ import { AppLayoutComponent } from './layout/app.layout.component';
 import { ListeServiceComponent } from './page-service/liste-service/liste-service.component';
 import { InscriptionComponent } from './page-inscription/inscription.component';
 import { DepenseComponent } from './page-depense/depense.component';
+import { RendezVousComponent } from './historique-rdv/liste-rdv/RendezVous.component';
 //
 import { LoginComponent } from './employe/login/login.component';
 import { RdvComponent } from './employe/rdv/rdv.component';
+import { NewemployeComponent } from './employe/newemploye/newemploye.component';
+import { PorteFeuilleComponent } from './porte-feuille/porte-feuille.component';
+import { ListemployeComponent } from './employe/listemploye/listemploye.component';
+import { ModifemployeComponent } from './employe/modifemploye/modifemploye.component';
+import { HoraireComponent } from './employe/horaire/horaire.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
 
   {path: 'user/c/inscription', component: InscriptionComponent},
+
+  {path: 'user/c', component: AppLayoutComponent,
+  children: [
+    {path: 'my-rdv', component: RendezVousComponent},
+    {path: 'my-account', component: PorteFeuilleComponent}
+  ]},
 
   {path: 'user/m', component: AppLayoutComponent,
   children: [
@@ -26,7 +38,11 @@ const routes: Routes = [
   
   {path: 'employe', component: AppLayoutComponent,
   children: [
-    { path: 'rdv', component: RdvComponent }
+    { path: 'rdv', component: RdvComponent },
+    { path: 'new', component: NewemployeComponent },
+    { path: 'list', component: ListemployeComponent },
+    { path: 'update/:id', component: ModifemployeComponent },
+    { path: 'horaire', component:HoraireComponent},
   ]},
 ];
 

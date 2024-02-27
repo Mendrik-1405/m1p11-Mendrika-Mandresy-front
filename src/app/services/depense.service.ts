@@ -18,4 +18,8 @@ export class DepenseService {
         return this.http.get<Depense[]>(this.apiUrl);
     }
 
+    ajoutDepense(depense : any) {
+        return this.http.post(this.apiUrl, depense);
+    }
+
 }

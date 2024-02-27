@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { RouterModule } from '@angular/router';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
     imports: [
         CommonModule,
@@ -15,6 +18,9 @@ import { RouterModule } from '@angular/router';
         InputTextModule,
         FormsModule,
         PasswordModule,
+        ProgressSpinnerModule,
+        ProgressBarModule,
+        ToastModule,
         RouterModule
     ],
     declarations: [LoginComponent]

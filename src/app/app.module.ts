@@ -12,9 +12,17 @@ import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { PorteFeuilleModule } from './porte-feuille/porte-feuille.module';
 //
 import { LoginModule } from './employe/login/login.module';
 import { RdvModule } from './employe/rdv/rdv.module';
+import { ListeHistoriqueRdvModule } from './historique-rdv/liste-rdv/RendezVous.module';
+import { NewemployeModule } from './employe/newemploye/newemploye.module';
+import { ListemployeModule } from './employe/listemploye/listemploye.module';
+import { ModifemployeModule } from './employe/modifemploye/modifemploye.module';
+import { HoraireComponent } from './employe/horaire/horaire.component';
+import { HoraireModule } from './employe/horaire/horaire.module';
+
 
 @NgModule({
   declarations: [
@@ -34,10 +42,16 @@ import { RdvModule } from './employe/rdv/rdv.module';
     DropdownModule,
     BrowserModule,
     FormsModule,
+    ListeHistoriqueRdvModule,
+    PorteFeuilleModule,
 
     //sasuke
     LoginModule,
-    RdvModule
+    RdvModule,
+    NewemployeModule,
+    ListemployeModule,
+    ModifemployeModule,
+    HoraireModule
   ],
   providers: [
     provideHttpClient(withFetch())

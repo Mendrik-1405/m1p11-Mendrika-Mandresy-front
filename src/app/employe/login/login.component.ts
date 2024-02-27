@@ -9,16 +9,11 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styles: [`
-        :host ::ng-deep .pi-eye,
-        :host ::ng-deep .pi-eye-slash {
-            transform:scale(1.6);
-            margin-right: 1rem;
-            color: var(--primary-color) !important;
-        }
-    `]
+    styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+
+    loading: boolean = false;
 
     employe: Employe = {
         name: undefined,
@@ -30,6 +25,7 @@ export class LoginComponent {
 
     submitForm(): void {
         try {
+                this.loading=true;
                 this.validateEmploye();
                 this.employeService.login(this.employe).subscribe((data) => {
                     var employe: Employe = data;
@@ -40,6 +36,10 @@ export class LoginComponent {
                         alert('Invalid employe');
                     }
                 });
+                setTimeout(() => {
+                    // Simuler une requête HTTP de connexion réussie pendant 2 secondes
+                    this.loading = false;
+                  }, 2000);
         } catch (error) {
             alert('error' + error);
         }
