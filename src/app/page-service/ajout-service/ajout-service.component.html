@@ -1,0 +1,37 @@
+<div class="col-12">
+    <div class="card">
+        <h5>Créer un nouveau service</h5>
+        <br>
+        <div class="p-fluid p-formgrid grid">
+            <form>
+                <div class="field col-12">
+                    <span class="p-float-label">
+                        <input pInputText id="nom" [(ngModel)]="nom" required>
+                        <label for="nom">Nom</label>
+                    </span>
+                </div>
+                <div class="field col-12">
+                    <span class="p-float-label">
+                        <input pInputText id="prix" [(ngModel)]="prix" required>
+                        <label for="prix">Prix</label>
+                    </span>
+                </div>
+                <div class="field col-12">
+                    <span class="p-float-label">
+                        <input pInputText id="duree" [(ngModel)]="duree" required>
+                        <label for="duree">Durée</label>
+                    </span>
+                </div>
+                <div class="field col-12">
+                    <span class="p-float-label">
+                        <input pInputText id="commission" [(ngModel)]="commission" required>
+                        <label for="commission">Commission</label>
+                    </span>
+                </div>
+                <div class="field col-12">
+                    <button pButton pRipple label="Créer" class="p-button-success" type="submit"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
