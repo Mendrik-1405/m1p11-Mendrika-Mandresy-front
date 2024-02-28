@@ -8,5 +8,5 @@ export interface Client {
     rendezVous?: string[];
     servicesPref?: string[]; 
     employesPref?: string[];
-    portefeuille?: number;
+    porteFeuille?: number;
 }

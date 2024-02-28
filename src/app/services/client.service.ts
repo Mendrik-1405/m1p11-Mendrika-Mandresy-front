@@ -25,6 +25,10 @@ export class ClientService {
 
   constructor(private http: HttpClient, public router: Router, private cookieService: CookieService) { }
 
+  getClientById(): Observable<Client> {
+    return this.http.get<Client>(environment.baseApiURL+'/client/'+this.client._id);
+  }
+
   getAllServicePref(): Observable<ServicePref[]> {
       return this.http.get<ServicePref[]>(this.apiUrl1);
   }
@@ -42,6 +46,10 @@ export class ClientService {
 
   inscription(newClient: any): Observable<any> {
     return this.http.post(`${environment.baseApiURL}/client`, newClient);
-} 
+  }
+  
+  updatePorteFeuille(updateClient: any): Observable<any> {
+    return this.http.put(environment.baseApiURL+'/client/'+this.client._id, updateClient);
+  }
 
 }

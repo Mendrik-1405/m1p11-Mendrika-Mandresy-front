@@ -1,12 +1,12 @@
 <div class="col-12">
     <div class="card">
-        <h5>Recharger mon compte (Solde actuelle: 1000 Ar)</h5>
+        <h5>Recharger mon compte (Solde actuelle: {{solde | currency: 'Ar '}})</h5>
         <br>
         <div class="p-fluid p-formgrid grid">
-            <form>
+            <form (ngSubmit)="Recharge()">
                 <div class="field col-12">
                     <span class="p-float-label">
-                        <input pInputText id="montant" [(ngModel)]="montant" required>
+                        <input pInputText id="montant" type="number" [(ngModel)]="porteFeuille" [ngModelOptions]="{standalone: true}" required>
                         <label for="montant">Montant</label>
                     </span>
                 </div>
