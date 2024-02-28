@@ -19,8 +19,9 @@ const httpOptions = {
 
 export class ClientService {
     
-    private apiUrl1 = environment.baseApiURL+'/client/pref/service/65dde36d9b01b0c109183039'; //URL GET Preference
-    private apiUrl2 = environment.baseApiURL+'/client/pref/emp/65dde36d9b01b0c109183039'; //URL GET Preference
+  client: Client = JSON.parse(localStorage.getItem('client') || '{}');
+  private apiUrl1 = environment.baseApiURL+'/client/pref/service/'+this.client._id; //URL GET Preference
+  private apiUrl2 = environment.baseApiURL+'/client/pref/emp/'+this.client._id; //URL GET Preference
 
   constructor(private http: HttpClient, public router: Router, private cookieService: CookieService) { }
 
