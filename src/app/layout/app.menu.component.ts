@@ -17,7 +17,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Rendez-Vous',
                 items: [
-                    { label: 'Prendre', icon: 'pi pi-fw pi-check-square', routerLink: ['/'] },
+                    { label: 'Prendre', icon: 'pi pi-fw pi-check-square', routerLink: ['/user/c/my-new-rdv'] },
                     { label: 'Liste', icon: 'pi pi-fw pi-list', routerLink: ['/user/c/my-rdv'] },
                 ]
             },
