@@ -17,6 +17,7 @@ import { ListemployeComponent } from './employe/listemploye/listemploye.componen
 import { ModifemployeComponent } from './employe/modifemploye/modifemploye.component';
 import { HoraireComponent } from './employe/horaire/horaire.component';
 import { AjoutServiceComponent } from './page-service/ajout-service/ajout-service.component';
+import { RdvInsertComponent } from './rdv-insert/rdv-insert.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -28,7 +29,9 @@ const routes: Routes = [
     {path: 'my-rdv', component: RendezVousComponent},
     {path: 'my-account', component: PorteFeuilleComponent},
     {path: 'pref/service', component: ServicePrefComponent},
-    {path: 'pref/emp', component: EmployePrefComponent}
+    {path: 'pref/emp', component: EmployePrefComponent},
+    {path: 'my-new-rdv', component: RdvInsertComponent},
+    {path: 'my-account', component: PorteFeuilleComponent}
   ]},
 
   {path: 'user/m', component: AppLayoutComponent,

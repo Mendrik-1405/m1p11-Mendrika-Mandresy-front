@@ -1,0 +1,36 @@
+<div class="card">
+    <form [formGroup]="rdvForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+           <label for="dateheure">Date et Heure du Rendez-vous</label>
+           <p-calendar id="dateheure" formControlName="dateheure" [showIcon]="true" inputId="buttondisplay" [showTime]="true" hourFormat="24"></p-calendar>
+        </div>
+        <div formArrayName="serviceEmpl">
+            <div class="p-formgrid grid">
+                <div class="field col">
+                    <label>Service</label>
+                </div>
+                <div class="field col">
+                    <label>Employé</label>
+                </div>
+                <div class="field col">
+                    
+                </div>
+            </div> 
+            <div class="p-formgrid grid" *ngFor="let serviceEmpl of serviceEmpls.controls; let i = index" [formGroupName]="i">
+                    <div class="field col">
+                        <p-dropdown [options]="services" optionLabel="nom" formControlName="service" placeholder="choisir un service" optionValue="_id" [editable]="true"></p-dropdown>
+                    </div>
+                    <div class="field col">
+                        <p-dropdown [options]="employees" optionLabel="name" formControlName="employe" placeholder="choisir un employé" optionValue="_id" [editable]="true"></p-dropdown>
+                    </div>
+                    <div class="field col">
+                        <button pButton icon="pi pi-trash" type="button" (click)="removeServiceEmpl(i)"></button>
+                    </div>
+            </div>
+        </div>
+       
+        <button pButton type="button" icon="pi pi-plus" (click)="addServiceEmpl()"></button>
+        <button pButton type="submit" label="Enregistrer"></button>
+    </form>
+       
+</div>

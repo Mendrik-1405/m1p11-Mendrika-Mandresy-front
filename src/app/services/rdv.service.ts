@@ -14,5 +14,11 @@ export class RdvService {
   findByIdemploye(id: string): Observable<Rdv[]> {
     const url = `${this.apiUrl}/rdvempl/${id}`;
     return this.http.get<Rdv[]>(url);
-}
+  }
+
+  
+  createRdv(json: string): Observable<Rdv> {
+    const url = `${this.apiUrl}`;
+    return this.http.post<Rdv>(url,json);
+  }
 }
