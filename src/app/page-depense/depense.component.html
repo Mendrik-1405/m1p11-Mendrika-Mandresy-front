@@ -36,18 +36,18 @@
             <form (ngSubmit) = "AjoutDepense()">
                 <div class="field col-12">
                     <span class="p-float-label">
-                        <p-dropdown [options]="types" [(ngModel)]="depense.type"  placeholder="Type" optionLabel="name" inputId="float-label"></p-dropdown>
+                        <p-dropdown [options]="types" [(ngModel)]="depense.type"  placeholder="Type" optionLabel="name" inputId="float-label" [ngModelOptions]="{standalone: true}"></p-dropdown>
                         <label for="float-label">Type</label>
                     </span>
                 </div>
                 <div class="field col-12">
                     <span class="p-float-label">
-                        <input pInputText id="montant" [(ngModel)]="depense.montant" required>
+                        <input pInputText id="montant" [(ngModel)]="depense.montant" name="montant" [ngModelOptions]="{standalone: true}" required>
                         <label for="montant">Montant</label>
                     </span>
                 </div>
                 <div class="field col-12">
-                    <p-calendar [(ngModel)]="depense.date" [iconDisplay]="'input'" [showIcon]="true"></p-calendar>
+                    <p-calendar [(ngModel)]="depense.date" [iconDisplay]="'input'" name="date" [ngModelOptions]="{standalone: true}" [showIcon]="true"></p-calendar>
                 </div>
                 <div class="field col-12">
                     <button pButton pRipple label="Insérer" class="p-button-success" type="submit"></button>

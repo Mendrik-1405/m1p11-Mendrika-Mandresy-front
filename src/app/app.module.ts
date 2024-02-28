@@ -22,6 +22,7 @@ import { ListemployeModule } from './employe/listemploye/listemploye.module';
 import { ModifemployeModule } from './employe/modifemploye/modifemploye.module';
 import { HoraireComponent } from './employe/horaire/horaire.component';
 import { HoraireModule } from './employe/horaire/horaire.module';
+import { AjoutServiceModule } from './page-service/ajout-service/ajout-service.module';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { HoraireModule } from './employe/horaire/horaire.module';
     FormsModule,
     ListeHistoriqueRdvModule,
     PorteFeuilleModule,
+    AjoutServiceModule,
 
     //sasuke
     LoginModule,

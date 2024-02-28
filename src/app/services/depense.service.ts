@@ -19,6 +19,7 @@ export class DepenseService {
     }
 
     ajoutDepense(depense : any) {
+        alert(depense.type);
         return this.http.post(this.apiUrl, depense);
     }
 

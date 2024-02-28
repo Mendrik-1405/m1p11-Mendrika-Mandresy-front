@@ -14,6 +14,7 @@ import { PorteFeuilleComponent } from './porte-feuille/porte-feuille.component';
 import { ListemployeComponent } from './employe/listemploye/listemploye.component';
 import { ModifemployeComponent } from './employe/modifemploye/modifemploye.component';
 import { HoraireComponent } from './employe/horaire/horaire.component';
+import { AjoutServiceComponent } from './page-service/ajout-service/ajout-service.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'user/m', component: AppLayoutComponent,
   children: [
     { path: 'service', component: ListeServiceComponent },
-    { path: 'depense', component: DepenseComponent }
+    { path: 'depense', component: DepenseComponent },
+    { path: 'service/add', component: AjoutServiceComponent }
   ]},
 
 
