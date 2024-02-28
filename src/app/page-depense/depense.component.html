@@ -36,7 +36,7 @@
             <form (ngSubmit) = "AjoutDepense()">
                 <div class="field col-12">
                     <span class="p-float-label">
-                        <p-dropdown [options]="types" [(ngModel)]="depense.type"  placeholder="Type" optionLabel="name" inputId="float-label" [ngModelOptions]="{standalone: true}"></p-dropdown>
+                        <p-dropdown [options]="types" [(ngModel)]="depense.type"  placeholder="Type" optionLabel="name" inputId="float-label" optionValue="name" [ngModelOptions]="{standalone: true}"></p-dropdown>
                         <label for="float-label">Type</label>
                     </span>
                 </div>
