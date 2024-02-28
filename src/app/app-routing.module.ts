@@ -19,6 +19,7 @@ import { ModifemployeComponent } from './employe/modifemploye/modifemploye.compo
 import { HoraireComponent } from './employe/horaire/horaire.component';
 import { AjoutServiceComponent } from './page-service/ajout-service/ajout-service.component';
 import { RdvInsertComponent } from './rdv-insert/rdv-insert.component';
+import { LoginmanComponent } from './loginman/loginman.component';
 
 const routes: Routes = [
   {path: '', component: AppLayoutComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
 
   //sasuke
   { path: 'employelogin', component: LoginComponent },
+  { path: 'managerlogin', component: LoginmanComponent },
   
   {path: 'employe', component: AppLayoutComponent,
   children: [
@@ -55,6 +57,8 @@ const routes: Routes = [
     { path: 'update/:id', component: ModifemployeComponent },
     { path: 'horaire', component:HoraireComponent},
   ]},
+
+  
 ];
 
 @NgModule({

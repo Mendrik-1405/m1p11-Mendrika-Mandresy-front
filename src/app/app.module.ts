@@ -26,6 +26,8 @@ import { EmployePefModule } from './page-preference/employe/liste/employe-pref.m
 import { ServicePefModule } from './page-preference/service/liste/service-pref.module';
 import { RdvInsertModule } from './rdv-insert/rdv-insert.module';
 import { ClientLoginModule } from './client-login/client-login.module';
+import { LoginmanModule } from './loginman/loginman.module';
+
 
 
 @NgModule({
@@ -60,7 +62,8 @@ import { ClientLoginModule } from './client-login/client-login.module';
     ListemployeModule,
     ModifemployeModule,
     HoraireModule,
-    RdvInsertModule
+    RdvInsertModule,
+    LoginmanModule
   ],
   providers: [
     provideHttpClient(withFetch())
