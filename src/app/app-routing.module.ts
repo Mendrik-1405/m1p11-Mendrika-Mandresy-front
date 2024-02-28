@@ -45,7 +45,6 @@ const routes: Routes = [
   ]},
 
 
-  //sasuke
   { path: 'employelogin', component: LoginComponent },
   { path: 'managerlogin', component: LoginmanComponent },
   
