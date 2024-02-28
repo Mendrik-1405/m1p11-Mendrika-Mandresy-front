@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from '@angular/forms';
 import { Service } from '../models/service';
 import { Employe } from '../models/employe';
 import { ServiceService } from '../services/service.service';
 import { EmployeService } from '../services/employe.service';
 import { RdvService } from '../services/rdv.service';
+import { Client } from '../models/client';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class RdvInsertComponent implements OnInit {
   rdvForm!: FormGroup;
   services !: Service[];
   employees !: Employe[];
-  
+  client:Client=JSON.parse(localStorage.getItem('client') || '{}');
 
   constructor(private fb: FormBuilder,private serviceService: ServiceService,private employeService: EmployeService,private rdvService: RdvService) { }
 
@@ -54,7 +54,7 @@ export class RdvInsertComponent implements OnInit {
  }
 
  onSubmit() {
-  this.rdvService.createRdv(this.rdvForm.value).subscribe((data) => {
+  this.rdvService.createRdv(this.rdvForm.value,this.client._id ?? '').subscribe((data) => {
       console.log("response "+data);
   });
  }

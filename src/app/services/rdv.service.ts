@@ -17,8 +17,8 @@ export class RdvService {
   }
 
   
-  createRdv(json: string): Observable<Rdv> {
-    const url = `${this.apiUrl}`;
+  createRdv(json: string, idclient: string): Observable<Rdv> {
+    const url = `${this.apiUrl}`+'/client/'+`${idclient}`;
     return this.http.post<Rdv>(url,json);
   }
 }
