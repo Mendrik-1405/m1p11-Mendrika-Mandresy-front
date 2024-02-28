@@ -31,6 +31,7 @@ export class ClientLoginComponent {
                     var client: Client = data;
                     if(client!==null){
                         localStorage.setItem('client', JSON.stringify(client));
+                        localStorage.setItem('role','client');
                         this.router.navigate(['user/c/my-rdv']);
                     }else{
                         alert('Invalid employe');

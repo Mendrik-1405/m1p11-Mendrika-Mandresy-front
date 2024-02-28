@@ -30,6 +30,7 @@ export class LoginmanComponent {
                     var manager: Manager = data;
                     if(manager!==null){
                         localStorage.setItem('manager', JSON.stringify(manager));
+                        localStorage.setItem('role', 'manager');
                         this.router.navigate(['employe/list']);
                     }else{
                         alert('Invalid manager');
