@@ -25,6 +25,7 @@ import { AjoutServiceModule } from './page-service/ajout-service/ajout-service.m
 import { EmployePefModule } from './page-preference/employe/liste/employe-pref.module';
 import { ServicePefModule } from './page-preference/service/liste/service-pref.module';
 import { RdvInsertModule } from './rdv-insert/rdv-insert.module';
+import { ClientLoginModule } from './client-login/client-login.module';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { RdvInsertModule } from './rdv-insert/rdv-insert.module';
     AjoutServiceModule,
     EmployePefModule,
     ServicePefModule,
+    ClientLoginModule,
 
     //sasuke
     LoginModule,
