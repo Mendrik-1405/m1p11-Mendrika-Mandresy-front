@@ -6,6 +6,8 @@ import { ListeServiceComponent } from './page-service/liste-service/liste-servic
 import { InscriptionComponent } from './page-inscription/inscription.component';
 import { DepenseComponent } from './page-depense/depense.component';
 import { RendezVousComponent } from './historique-rdv/liste-rdv/RendezVous.component';
+import { ServicePrefComponent } from './page-preference/service/liste/service-pref.component';
+import { EmployePrefComponent } from './page-preference/employe/liste/employe-pref.component';
 //
 import { LoginComponent } from './employe/login/login.component';
 import { RdvComponent } from './employe/rdv/rdv.component';
@@ -24,7 +26,9 @@ const routes: Routes = [
   {path: 'user/c', component: AppLayoutComponent,
   children: [
     {path: 'my-rdv', component: RendezVousComponent},
-    {path: 'my-account', component: PorteFeuilleComponent}
+    {path: 'my-account', component: PorteFeuilleComponent},
+    {path: 'pref/service', component: ServicePrefComponent},
+    {path: 'pref/emp', component: EmployePrefComponent}
   ]},
 
   {path: 'user/m', component: AppLayoutComponent,

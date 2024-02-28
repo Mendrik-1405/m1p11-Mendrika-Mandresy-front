@@ -24,8 +24,8 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Favoris',
                 items: [
-                    { label: 'Services', icon: 'pi pi-fw pi-share-alt', routerLink: ['/'] },
-                    { label: 'Employés', icon: 'pi pi-fw pi-user', routerLink: ['/'] },
+                    { label: 'Services', icon: 'pi pi-fw pi-share-alt', routerLink: ['/user/c/pref/service'] },
+                    { label: 'Employés', icon: 'pi pi-fw pi-user', routerLink: ['/user/c/pref/emp'] },
                 ]
             },
             {

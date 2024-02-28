@@ -23,6 +23,8 @@ import { ModifemployeModule } from './employe/modifemploye/modifemploye.module';
 import { HoraireComponent } from './employe/horaire/horaire.component';
 import { HoraireModule } from './employe/horaire/horaire.module';
 import { AjoutServiceModule } from './page-service/ajout-service/ajout-service.module';
+import { EmployePefModule } from './page-preference/employe/liste/employe-pref.module';
+import { ServicePefModule } from './page-preference/service/liste/service-pref.module';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { AjoutServiceModule } from './page-service/ajout-service/ajout-service.m
     ListeHistoriqueRdvModule,
     PorteFeuilleModule,
     AjoutServiceModule,
+    EmployePefModule,
+    ServicePefModule,
 
     //sasuke
     LoginModule,
