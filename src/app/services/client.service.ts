@@ -40,4 +40,8 @@ export class ClientService {
     return this.cookieService.get('token');
   }
 
+  inscription(newClient: any): Observable<any> {
+    return this.http.post(`${environment.baseApiURL}/client`, newClient);
+} 
+
 }
