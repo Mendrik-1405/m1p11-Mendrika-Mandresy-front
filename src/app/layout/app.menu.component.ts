@@ -115,7 +115,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Employés',
                 items: [
                     { label: 'Ajouter', icon: 'pi pi-fw pi-pencil', routerLink: ['/employe/new'] },
-                    { label: 'Ajouter', icon: 'pi pi-fw pi-list', routerLink: ['/employe/list'] },
+                    { label: 'Liste', icon: 'pi pi-fw pi-list', routerLink: ['/employe/list'] },
                 ]
             }
         ];
@@ -133,7 +133,7 @@ export class AppMenuComponent implements OnInit {
             },{
                 label: 'gestion horaire',
                 items: [
-                    { label: 'changer', icon: 'pi pi-fw pi-pencil', routerLink: ['/employe/rdv'] },
+                    { label: 'changer', icon: 'pi pi-fw pi-pencil', routerLink: ['/employe/horaire'] },
                 ]
             },
 

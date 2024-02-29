@@ -41,6 +41,7 @@ export class NewemployeComponent {
       this.employeService.uploadEmployeData(formData).subscribe(response => {
         console.log('Data submitted successfully');
       });
+      this.router.navigate(['/employe/list']);
     }
   }
 }

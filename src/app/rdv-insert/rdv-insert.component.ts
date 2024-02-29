@@ -6,6 +6,7 @@ import { ServiceService } from '../services/service.service';
 import { EmployeService } from '../services/employe.service';
 import { RdvService } from '../services/rdv.service';
 import { Client } from '../models/client';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class RdvInsertComponent implements OnInit {
   employees !: Employe[];
   client:Client=JSON.parse(localStorage.getItem('client') || '{}');
 
-  constructor(private fb: FormBuilder,private serviceService: ServiceService,private employeService: EmployeService,private rdvService: RdvService) { }
+  constructor(private fb: FormBuilder,private serviceService: ServiceService,private employeService: EmployeService,private rdvService: RdvService,private router: Router) { }
 
  ngOnInit() {
     this.serviceService.getAllService().subscribe((data) => {
@@ -57,5 +58,6 @@ export class RdvInsertComponent implements OnInit {
   this.rdvService.createRdv(this.rdvForm.value,this.client._id ?? '').subscribe((data) => {
       console.log("response "+data);
   });
+  this.router.navigate(['/employe/rdv']);
  }
 }
