@@ -110,6 +110,13 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Ajouter', icon: 'pi pi-fw pi-pencil', routerLink: ['/user/m/depense'] },
                 ]
+            },
+            {
+                label: 'Employés',
+                items: [
+                    { label: 'Ajouter', icon: 'pi pi-fw pi-pencil', routerLink: ['/employe/new'] },
+                    { label: 'Ajouter', icon: 'pi pi-fw pi-list', routerLink: ['/employe/list'] },
+                ]
             }
         ];
 
@@ -121,8 +128,12 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Rendez-Vous',
                 items: [
-                    { label: 'Prendre', icon: 'pi pi-fw pi-check-square', routerLink: ['/'] },
-                    { label: 'Liste', icon: 'pi pi-fw pi-list', routerLink: ['/'] },
+                    { label: 'Liste', icon: 'pi pi-fw pi-list', routerLink: ['/employe/rdv'] },
+                ]
+            },{
+                label: 'gestion horaire',
+                items: [
+                    { label: 'changer', icon: 'pi pi-fw pi-pencil', routerLink: ['/employe/rdv'] },
                 ]
             },
 
