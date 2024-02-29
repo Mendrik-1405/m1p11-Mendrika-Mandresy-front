@@ -8,10 +8,6 @@ import { Client } from '../models/client';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
-const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-    withCredentials: true
-  };
 
 @Injectable({
     providedIn: 'root'
@@ -38,7 +34,7 @@ export class ClientService {
   }
 
   login(client: Client):Observable<Client> {
-    return this.http.post<Client>(`${environment.baseApiURL}/client/login`, client,httpOptions);
+    return this.http.post<Client>(`${environment.baseApiURL}/client/login`, client);
   }
   getToken() {
     return this.cookieService.get('token');
