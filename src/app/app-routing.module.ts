@@ -22,7 +22,7 @@ import { RdvInsertComponent } from './rdv-insert/rdv-insert.component';
 import { LoginmanComponent } from './loginman/loginman.component';
 
 const routes: Routes = [
-  {path: '', component: AppLayoutComponent},
+  {path: '' , redirectTo: 'user/c/login', pathMatch: 'full'},
 
   {path: 'user/c/inscription', component: InscriptionComponent},
   {path: 'user/c/login', component: ClientLoginComponent},
