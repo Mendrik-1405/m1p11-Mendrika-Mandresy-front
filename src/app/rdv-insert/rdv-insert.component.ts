@@ -58,6 +58,6 @@ export class RdvInsertComponent implements OnInit {
   this.rdvService.createRdv(this.rdvForm.value,this.client._id ?? '').subscribe((data) => {
       console.log("response "+data);
   });
-  this.router.navigate(['/employe/rdv']);
+  this.router.navigate(['/user/c/my-rdv']);
  }
 }
