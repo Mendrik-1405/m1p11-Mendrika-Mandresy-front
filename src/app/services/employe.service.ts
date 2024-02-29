@@ -5,10 +5,7 @@ import { environment } from '../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import { Employe } from '../models/employe';
 import { Observable } from 'rxjs';
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  withCredentials: true
-};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +14,7 @@ export class EmployeService {
  
   constructor(private http: HttpClient, public router: Router, private cookieService: CookieService) { }
   login(employe: Employe):Observable<Employe> {
-    return this.http.post<Employe>(`${environment.baseApiURL}/employe/login`, employe,httpOptions);
+    return this.http.post<Employe>(`${environment.baseApiURL}/employe/login`, employe);
   }
   getToken() {
     return this.cookieService.get('token');
