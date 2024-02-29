@@ -16,8 +16,8 @@ export class LoginComponent {
     loading: boolean = false;
 
     employe: Employe = {
-        name: undefined,
-        password: undefined
+        name: 'employe',
+        password: 'employe'
     }
 
 
@@ -31,6 +31,7 @@ export class LoginComponent {
                     var employe: Employe = data;
                     if(employe!==null){
                         localStorage.setItem('employe', JSON.stringify(employe));
+                        localStorage.setItem('role', 'employe');
                         this.router.navigate(['employe/rdv']);
                     }else{
                         alert('Invalid employe');

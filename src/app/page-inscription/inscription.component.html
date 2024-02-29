@@ -8,27 +8,30 @@
                 </div>
 
                 <div>
-                    <form>
+                    <form (ngSubmit) = "Inscription()">
                         <label for="nom" class="block text-900 text-xl font-medium mb-2">Votre nom</label>
-                        <input id="nom" type="text" name="nom" placeholder="Veuillez saisir votre nom" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+                        <input id="nom" type="text" name="nom" placeholder="Veuillez saisir votre nom" [(ngModel)]="client.nom" [ngModelOptions]="{standalone: true}" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
 
                         <label for="email" class="block text-900 text-xl font-medium mb-2">Email</label>
-                        <input id="email" type="text" name="email" placeholder="Veuillez saisir votre adresse email" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+                        <input id="email" type="text" name="email" placeholder="Veuillez saisir votre adresse email" [(ngModel)]="client.email" [ngModelOptions]="{standalone: true}" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
 
                         <label for="phone" class="block text-900 text-xl font-medium mb-2">Téléphone</label>
-                        <input id="phone" type="text" name="telephone" placeholder="Votre numero téléphone" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+                        <input id="phone" type="text" name="telephone" placeholder="Votre numero téléphone"[(ngModel)]="client.phone" [ngModelOptions]="{standalone: true}" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
 
                         <label for="password" class="block text-900 text-xl font-medium mb-2">Mot de passe</label>
-                        <input id="password" type="password" name="password" placeholder="Veuillez définir votre mot de passe" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+                        <input id="password" type="password" name="password" placeholder="Veuillez définir votre mot de passe" [(ngModel)]="client.password" [ngModelOptions]="{standalone: true}" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
 
                         <label for="confirm" class="block text-900 text-xl font-medium mb-2">Confirmation de mot de passe</label>
-                        <input id="confirm" type="password" name="confirm" placeholder="Confirmer votre mot de passe" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+                        <input id="confirm" type="password" name="confirm" placeholder="Confirmer votre mot de passe" [(ngModel)]="client.confirmation" [ngModelOptions]="{standalone: true}" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
 
                         <div class="flex align-items-center justify-content-between mb-5 gap-5">
                             <!-- <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Mot de passe oublie</a> -->
                         </div>
                         <button pButton pRipple label="Créer votre compte" type="submit" class="w-full p-3 text-xl"></button>
                     </form>
+                </div>
+                <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                    <a routerLink="/user/c/login">se connecter</a>
                 </div>
             </div>
         </div>
