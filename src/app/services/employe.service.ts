@@ -31,4 +31,7 @@ export class EmployeService {
   getEmployebyId(id: string):Observable<Employe> {
     return this.http.get<Employe>(`${environment.baseApiURL}/employe/${id}`);
   }
+  updateEmployehoraire(id: string, employe: Employe): Observable<Employe> {
+    return this.http.put<Employe>(`${environment.baseApiURL}/employe/${id}`, employe);
+  }
 }

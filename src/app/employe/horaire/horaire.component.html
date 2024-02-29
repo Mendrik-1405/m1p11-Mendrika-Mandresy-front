@@ -1,13 +1,16 @@
 <div class="card p-fluid">
     <h5>gestion horaire</h5>
-    <div class="p-formgrid grid">
-        <div class="field col">
-            <label htmlFor="name2">debut</label>
-            <input pInputText id="name2" type="text" />
+    <form (ngSubmit)="onSubmit()">
+        <div class="p-formgrid grid">
+            <div class="field col">
+                <label htmlFor="debut">debut</label>
+                <input pInputText type="time" [(ngModel)]="horaire.debut" class="form-control" id="debut" name="debut" required>
+            </div>
+            <div class="field col">
+                <label htmlFor="fin">fin</label>
+                <input pInputText type="time" [(ngModel)]="horaire.fin" class="form-control" id="fin" name="fin"required>
+            </div>
+            <button pButton pRipple label="enregistrer" class="w-full p-3 text-xl"></button>
         </div>
-        <div class="field col">
-            <label htmlFor="email2">fin</label>
-            <input pInputText id="email2" type="text" />
-        </div>
-    </div>
+    </form>
 </div>
