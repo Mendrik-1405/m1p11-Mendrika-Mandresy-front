@@ -15,8 +15,8 @@ export class LoginmanComponent {
     loading: boolean = false;
 
     manager: Manager = {
-      nom: undefined,
-        password: undefined
+      nom: 'manager',
+        password: 'manager'
     }
 
 

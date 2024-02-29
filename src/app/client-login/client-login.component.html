@@ -17,6 +17,9 @@
                     </div>
                     <button pButton pRipple *ngIf="!loading" label="Login" class="w-full p-3 text-xl"></button>
                     <button pButton pRipple *ngIf="loading" class="w-full p-3 text-xl" disabled><p-progressSpinner id="customSpinner" styleClass="w-2rem h-2rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner></button>
+                    <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                        <a routerLink="/user/c/inscription">inscription</a>
+                    </div>
                     </form>
                 </div>
             </div>

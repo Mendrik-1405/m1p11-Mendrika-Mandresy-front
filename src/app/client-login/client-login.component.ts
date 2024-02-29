@@ -16,8 +16,8 @@ export class ClientLoginComponent {
     loading: boolean = false;
 
     client: Client = {
-        nom: undefined,
-        password: undefined
+        nom: 'client',
+        password: 'client'
     }
 
 

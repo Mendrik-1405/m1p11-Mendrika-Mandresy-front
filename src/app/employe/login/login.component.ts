@@ -16,8 +16,8 @@ export class LoginComponent {
     loading: boolean = false;
 
     employe: Employe = {
-        name: undefined,
-        password: undefined
+        name: 'employe',
+        password: 'employe'
     }
 
 
